@@ -5,27 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício 01</title>
+    <title>Exercício 02</title>
 </head>
 
 <body>
     <div>
-        <input type="number" name="" id="numero_01">
+        <input onkeyup="Calcular()" type="number" name="" id="numero_01">
     </div>
     <div>
-        <input type="number" name="" id="numero_02">
+        <input onkeyup="Calcular()" type="number" name="" id="numero_02">
     </div>
     <div>
-        <input type="number" name="" id="numero_03">
+        <input onkeyup=" Calcular()" type="number" name="" id="numero_03">
     </div>
-    <div>
-        <button onclick="Calcular()" id="button">Calcular</button>
-    </div>
-
+    
     <div id="div_resultado">
         0
     </div>
-
 
 </body>
 
@@ -37,15 +33,15 @@
     function Calcular() {
 
         const input_01 = document.getElementById("numero_01")
-        const input_01_value = Number(input_01.value)
+        const input_01_value = input_01.value
 
         const input_02 = document.getElementById("numero_02")
-        const input_02_value = Number(input_02.value)
+        const input_02_value = input_02.value
 
         const input_03 = document.getElementById("numero_03")
-        const input_03_value = Number(input_03.value)
+        const input_03_value = input_03.value
 
-        const resultado = input_01_value + input_02_value + input_03_value
+        const resultado = Number(input_01_value) + Number(input_02_value) + Number(input_03_value)
 
         const divResultado = document.getElementById("div_resultado")
         divResultado.innerHTML = resultado
